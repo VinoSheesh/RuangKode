@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Responsive</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <style>
+      .slide-in {
+        transform: translateY(0%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .slide-out {
+        transform: translateY(-120%);
+        transition: transform 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="w-full h-screen bg-gray-900 text-white">
+    <nav
+      class="w-full h-fit flex py-4 px-3 bg-transparent backdrop-blur-md items-center justify-between md:justify-around text-white fixed z-50 font-spacegrotesk"
+    >
+      <a href="#" class="font-bold text-xl">RuangKode</a>
+
+      <!-- Hamburger button -->
+      <button id="hamburger-btn" class="md:hidden focus:outline-none">
+        <!-- Hamburger Icon -->
+        <svg
+          id="icon-hamburger"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-7 w-7 text-purple-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 8h16M4 16h16"
+          />
+        </svg>
+
+        <!-- Close Icon (hidden by default) -->
+        <svg
+          id="icon-close"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-7 w-7 text-purple-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <!-- Desktop Menu -->
+      <ul class="md:flex hidden items-center justify-center gap-6">
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Why RuangKode?</a></li>
+        <li><a href="#">Program</a></li>
+        <li><a href="#">Review</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+
+      <button
+        class="bg-purple-600 px-5 py-2 text-base text-white rounded-lg hidden md:block font-poppins"
+      >
+        Daftar
+      </button>
+    </nav>
+
+    <div
+      id="mobile-menu"
+      class="fixed top-0 right-0 w-full h-fit bg-gray-800 flex flex-col items-start gap-6 px-6 pt-16 pb-8 text-white slide-out md:hidden z-40 font-spacegrotesk"
+    >
+      <a href="#">Beranda</a>
+      <a href="#">Why RuangKode?</a>
+      <a href="#">Program</a>
+      <a href="#">Review</a>
+      <a href="#">Kontak</a>
+      <button
+        class="bg-purple-600 px-5 py-2 text-white rounded-lg font-poppins"
+      >
+        Daftar
+      </button>
+    </div>
+
+    <section
+      class="w-full h-fit flex-col md:flex-row flex-nowrap font-spacegrotesk px-2 md:px-28"
+    >
+      <div
+        class="pt-28 flex flex-col-reverse items-center justify-between md:flex-row text-white px-4"
+      >
+        <div class="flex-col">
+          <h3 class="text-2xl md:text-6xl font-bold">
+            Platform Pelatihan Programmer Profesional Terbesar di Indonesia.
+          </h3>
+          <button
+            class="bg-purple-600 px-4 py-4 md:px-5 md:py-4 text-white md:text-lg text-base rounded-lg md:mt-8 mt-4"
+          >
+            Eksplor Lebih Lanjut
+          </button>
+        </div>
+
+        <img src="assets/heroImage.png" alt="" />
+      </div>
+    </section>
+
+    <div class="w-full mx-auto px-4 md:px-28 mt-8">
+      <div
+        class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 bg-abu rounded-2xl font-poppins p-6"
+      >
+        <div class="flex flex-col items-center">
+          <h1 class="text-2xl font-bold text-center">10 Tahun</h1>
+          <p class="text-center">Di dunia pemrogramman</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <h1 class="text-2xl font-bold text-center">50.000+</h1>
+          <p class="text-center">Client sukses</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <h1 class="text-2xl font-bold text-center">± 20 juta/bulan</h1>
+          <p class="text-center">Gaji awal tertinggi client RuangKode</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <h1 class="text-2xl font-bold text-center">200+</h1>
+          <p class="text-center">Koneksi di perusahaan besar</p>
+        </div>
+      </div>
+    </div>
+
+    <section
+      class="w-full flex flex-col items-center font-spacegrotesk mt-24 gap-16"
+    >
+      <div class="flex flex-col items-center justify-center text-center gap-4">
+        <h1 class="text-4xl font-bold">Mengapa memilih RuangKode?</h1>
+        <p class="px-4">
+          "RuangKode, yang telah beroperasi lebih dari 10 tahun, terus
+          berkembang sebagai pusat pendidikan teknologi digital yang
+          terpercaya."
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 grid-cols-1 gap-8 md:mx-0 px-4">
+        <div
+          class="flex-col w-[360px] md:w-[390px] h-[240px] p-4 bg-abu rounded-lg"
+        >
+          <div class="flex flex-row items-center gap-4">
+            <img src="assets/aboutIcon1.png" alt="" />
+            <h1 class="font-bold">
+              Lulusan RuangKode telah terbukti di industri.
+            </h1>
+          </div>
+          <p class="mt-2">
+            RuangKode telah membantu ribuan profesional digital terhubung dengan
+            lebih dari 1.000 perusahaan dari berbagai industri di dunia.
+          </p>
+        </div>
+        <div
+          class="flex-col w-[360px] md:w-[390px] h-[240px] p-4 bg-abu rounded-lg"
+        >
+          <div class="flex flex-row items-center gap-4">
+            <img src="assets/aboutIcon2.png" alt="" />
+            <h1 class="font-bold">
+              Lulusan RuangKode telah terbukti di industri.
+            </h1>
+          </div>
+          <p class="mt-2">
+            RuangKode telah membantu ribuan profesional digital terhubung dengan
+            lebih dari 1.000 perusahaan dari berbagai industri di dunia.
+          </p>
+        </div>
+        <div
+          class="flex-col w-[360px] md:w-[390px] h-[240px] p-4 bg-abu rounded-lg"
+        >
+          <div class="flex flex-row items-center gap-4">
+            <img src="assets/aboutIcon3.png" alt="" />
+            <h1 class="font-bold">
+              Lulusan RuangKode telah terbukti di industri.
+            </h1>
+          </div>
+          <p class="mt-2">
+            RuangKode telah membantu ribuan profesional digital terhubung dengan
+            lebih dari 1.000 perusahaan dari berbagai industri di dunia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="flex flex-col items-center gap-10 border-t-2 border-b-2 border-white mt-8 pb-16 pt-8 md:mx-28"
+    >
+      <h1 class="text-4xl font-bold font-spacegrotesk">Dipercaya Oleh</h1>
+      <div
+        class="flex flex-row gap-8 justify-center md:overflow-x-hidden overflow-x-scroll"
+      >
+        <img src="assets/mediaIcon1.png" alt="" />
+        <img src="assets/mediaIcon2.png" alt="" />
+        <img src="assets/mediaIcon3.png" alt="" />
+        <img src="assets/mediaIcon4.png" alt="" />
+        <img src="assets/mediaIcon5.png" alt="" />
+        <img src="assets/mediaIcon6.png" alt="" />
+      </div>
+    </div>
+
+    <section
+      class="w-full flex flex-col items-center font-spacegrotesk mt-24 gap-16"
+    >
+      <h1 class="text-4xl font-bold font-spacegrotesk">
+        Jelajahi Program Kami
+      </h1>
+      <div class="grid grid-cols-3 justify-center gap-8 md:overflow-x-hidden overflow-x-scroll">
+        <div class="bg-abu flex flex-col justify-between gap-4 p-8 w-[390px] rounded-2xl">
+          <img src="assets/programIcon1.png" alt="" class="w-16" />
+          <div class="flex flex-col gap-1">
+            <h1 class="text-4xl font-bold font-spacegrotesk">
+              Data Analytics
+            </h1>
+            <p class="font-poppins text-xs">Live Program • 4 or 7 Months</p>
+            <p class="font-spacegrotesk text-orange-200">Stay ahead with RuangKode</p>
+          </div>
+          <ul class="flex flex-col">
+            <li class="inline-flex">
+              <img src="assets/check.png" alt="" class="w-[26px] h-[26px]" />
+              <p>Memahami & memecahkan masalah bisnis menggunakan data.</p>
+            </li>
+            <li class="inline-flex">
+              <img src="assets/check.png" alt="" class="w-[26px] h-[26px]" />
+              <p>
+                Mengubah data menjadi wawasan untuk pengambilan keputusan
+                bisnis.
+              </p>
+            </li>
+            <li class="inline-flex">
+              <img src="assets/check.png" alt="" class="w-[26px] h-[26px]"/>
+              <p>
+                Menggunakan data untuk memahami, mengukur, dan memperbaiki
+                proses bisnis.
+              </p>
+            </li>
+          </ul>
+          <button class="bg-ungu font-poppins text-lg py-2 rounded-lg">Daftar</button>
+        </div>
+        <div class="bg-abu flex flex-col justify-between  gap-4 p-8 w-[390px] rounded-2xl">
+          <img src="assets/programIcon2.png" alt="" class="w-16" />
+          <div class="flex flex-col gap-1">
+            <h1 class="text-4xl font-bold font-spacegrotesk">
+              Web Development
+            </h1>
+            <p class="font-poppins text-xs">Live Program • 4 or 7 Months</p>
+            <p class="font-spacegrotesk text-orange-200">Stay ahead with RuangKode</p>
+          </div>
+          <ul class="flex flex-col">
+            <li class="inline-flex">
+              <img src="assets/check.png" alt="" class="w-[26px] h-[26px]" />
+              <p>Mampu memahami cara kerja website secara menyeluruh.</p>
+            </li>
+            <li class="inline-flex">
+              <img src="assets/check.png" alt="" class="w-[26px] h-[26px]" />
+              <p>
+                Mampu memahami pentingnya pengalaman pengguna (UX) di web.
+              </p>
+            </li>
+            <li class="inline-flex">
+              <img src="assets/check.png" alt="" class="w-[26px] h-[26px]"/>
+              <p>
+                Menguasai dasar-dasar coding untuk pengembangan web.
+              </p>
+            </li>
+          </ul>
+          <button class="bg-ungu font-poppins text-lg py-2 rounded-lg">Daftar</button>
+        </div>
+        
+        <div class="bg-abu flex flex-col justify-between gap-4 p-8 w-[390px] rounded-2xl">
+          <img src="assets/programIcon3.png" alt="" class="w-16" />
+          <div class="flex flex-col gap-1">
+            <h1 class="text-4xl font-bold font-spacegrotesk">
+              UI/UX Design
+            </h1>
+            <p class="font-poppins text-xs">Live Program • 4 or 7 Months</p>
+            <p class="font-spacegrotesk text-orange-200">Stay ahead with RuangKode</p>
+          </div>
+          <ul class="flex flex-col">
+            <li class="inline-flex">
+              <img src="assets/check.png" alt="" class="w-[26px] h-[26px]" />
+              <p>Mampu mendesain antarmuka yang mudah digunakan dan menarik.</p>
+            </li>
+            <li class="inline-flex">
+              <img src="assets/check.png" alt="" class="w-[26px] h-[26px]" />
+              <p>
+                Menciptakan pengalaman pengguna yang intuitif dan efisien.
+              </p>
+            </li>
+            <li class="inline-flex">
+              <img src="assets/check.png" alt="" class="w-[26px] h-[26px]"/>
+              <p>
+                Menggabungkan estetika dan fungsionalitas untuk pengguna.
+              </p>
+            </li>
+          </ul>
+          <button class="bg-ungu font-poppins text-lg py-2 rounded-lg">Daftar</button>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="w-full flex flex-col items-center justify-between font-spacegrotesk mt-24 bg-white rounded-t-lg md:px-12 px-4 py-8"
+    >
+      <div class="flex flex-col md:flex-row justify-between gap-8 w-full">
+        <div class="flex flex-col gap-10 md:w-1/2">
+          <div class="flex flex-col gap-4 item-start justify-center">
+            <a href="#" class="font-bold text-3xl text-black">RuangKode</a>
+            <p class="font-normal text-lg text-black max-w-md leading-relaxed">
+              RuangKode Learning Space Jl. Teknologi Inovatif No.42,
+              Cipamokolan, Kec. Arcamanik, Kota Bandung Jawa Barat 40293
+            </p>
+          </div>
+        <div class="flex flex-row gap-2">
+           <a href="#">
+            <img src="assets/facebook.svg" alt="Facebook" class="w-6 h-6" />
+          </a>
+           <a href="#">
+            <img src="assets/linkedin.svg" alt="Facebook" class="w-6 h-6" />
+          </a>
+           <a href="#">
+            <img src="assets/youtube.svg" alt="Facebook" class="w-6 h-6" />
+          </a>
+           <a href="#">
+            <img src="assets/instagram.svg" alt="Facebook" class="w-6 h-6" />
+          </a>
+        </div>
+
+        </div>
+
+<div class="flex flex-col gap-3 items-center bg-white p-6 md:w-1/2">
+  <h4 class="text-4xl font-bold text-black">Langganan</h4>
+  <p class="text-lg font-base text-black">Terima notifikasi khusus dari email</p>
+
+  <div class="flex flex-col gap-3 items-center w-full">
+    <input
+      type="text"
+      placeholder="Nama"
+      class="bg-white rounded-xl py-4 px-4 w-full max-w-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+    />
+    <input
+      type="text"
+      placeholder="Nomor Handphone"
+      class="bg-white rounded-xl py-4 px-4 w-full max-w-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+    />
+    <input
+      type="text"
+      placeholder="Email"
+      class="bg-white rounded-xl py-4 px-4 w-full max-w-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+    />
+  </div>
+</div>
+
+
+
+      </div>
+
+<div class="relative w-full flex flex-col items-center md:items-start text-center text-black mt-6">
+  <p class="w-full md:w-auto md:absolute left-1/2 transform md:-translate-x-1/2">© 2025 RuangKode. All rights reserved.</p>
+  <p class="w-full md:w-auto md:absolute right-0 md:text-right mt-2 md:mt-0">Terms • Privacy</p>
+</div>
+
+    </footer>
+
+    <script>
+      const hamburgerBtn = document.getElementById("hamburger-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const iconHamburger = document.getElementById("icon-hamburger");
+      const iconClose = document.getElementById("icon-close");
+
+      let menuOpen = false;
+
+      hamburgerBtn.addEventListener("click", function () {
+        menuOpen = !menuOpen;
+
+        if (menuOpen) {
+          mobileMenu.classList.remove("slide-out");
+          mobileMenu.classList.add("slide-in");
+          iconHamburger.classList.add("hidden");
+          iconClose.classList.remove("hidden");
+        } else {
+          mobileMenu.classList.add("slide-out");
+          mobileMenu.classList.remove("slide-in");
+          iconHamburger.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        if (
+          menuOpen &&
+          !hamburgerBtn.contains(event.target) &&
+          !mobileMenu.contains(event.target)
+        ) {
+          menuOpen = false;
+          mobileMenuClassList.add("slide-out");
+          mobileMenuClassList.remove("slide-in");
+          iconHamburger.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
