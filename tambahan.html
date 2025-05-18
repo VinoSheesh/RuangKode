@@ -1,0 +1,248 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RuangKode</title>
+        <link rel="stylesheet" href="src/output.css" />
+        <style>
+        .slide-in {
+            transform: translateY(0%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .slide-out {
+            transform: translateY(-120%);
+            transition: transform 0.3s ease-in-out;
+        }
+        ::-webkit-scrollbar{
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track{
+            background: #f1f1f1;
+            border-radius: 2px;
+        }
+
+        ::-webkit-scrollbar-thumb{
+            background-color: #3c00ff;
+            border-radius:  2px;
+            border: 2px solid #f1f1f1;
+        }
+        </style>
+    </head>
+    <body class="w-full h-screen bg-gray-900 text-white">
+        <nav
+        class="w-full h-fit flex py-4 px-3 bg-transparent backdrop-blur-md items-center justify-between md:justify-around text-white fixed z-50 font-spacegrotesk"
+        >
+        <a href="#" class="font-bold text-xl">RuangKode</a>
+
+        <!-- Hamburger button -->
+        <button id="hamburger-btn" class="md:hidden focus:outline-none">
+            <!-- Hamburger Icon -->
+            <svg
+            id="icon-hamburger"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7 text-purple-500"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 8h16M4 16h16"
+            />
+            </svg>
+
+            <!-- Close Icon (hidden by default) -->
+            <svg
+            id="icon-close"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7 text-purple-500 hidden"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+            />
+            </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+        <ul class="md:flex hidden items-center justify-center gap-6">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Why RuangKode?</a></li>
+            <li><a href="#">Program</a></li>
+            <li><a href="#">Review</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+
+        <button
+            class="bg-purple-600 px-5 py-2 text-base text-white rounded-lg hidden md:block font-poppins"
+        >
+            Daftar
+        </button>
+        </nav>
+
+        <div
+        id="mobile-menu"
+        class="fixed top-0 right-0 w-full h-fit bg-gray-800 flex flex-col items-start gap-6 px-6 pt-16 pb-8 text-white slide-out md:hidden z-40 font-spacegrotesk"
+        >
+        <a href="#">Beranda</a>
+        <a href="#">Why RuangKode?</a>
+        <a href="#">Program</a>
+        <a href="#">Review</a>
+        <a href="#">Kontak</a>
+        <button
+            class="bg-purple-600 px-5 py-2 text-white rounded-lg font-poppins"
+        >
+            Daftar
+        </button>
+        </div>
+
+        <section
+        class="w-full h-fit flex flex-col flex-nowrap font-spacegrotesk px-2 md:px-28 pt-28 gap-16"
+        >
+        <div class="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-16">
+            <div>
+            <h1 class="font-bold text-2xl mb-4 border-ungu border-l-8">  <span class="bg-purple-600 w-[5px] h-[20px] inline-block"></span>Tentang Kami</h1>
+            <p>RuangKode adalah platform kursus online yang berfokus pada pembelajaran coding dan teknologi digital. Dirancang untuk pemula hingga tingkat lanjut, RuangKode menyediakan materi yang up-to-date, praktis, dan mudah dipahami. Dengan dukungan mentor profesional, sistem belajar fleksibel, dan komunitas yang aktif, RuangKode hadir sebagai solusi belajar coding yang terjangkau dan berkualitas.</p>
+            </div>
+            <img src="assets/about.png" class="w-full md:w-1/2" />
+        </div>
+        <div class="w-full flex flex-col-reverse md:flex-row-reverse items-center justify-between gap-16">
+            <div>
+               <h1 class="font-bold text-2xl mb-4 flex items-center gap-2">
+      <span class="bg-purple-100 w-[10px] h-[20px] inline-block"></span>
+      Visi
+    </h1>
+            <p>Menjadi platform belajar coding terbaik di Indonesia yang membentuk generasi digital kreatif, produktif, dan siap bersaing di dunia industri teknologi.</p>
+            </div>
+          
+        </div>
+        <div class="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-16">
+            <div>
+            <h1 class="font-bold text-2xl mb-4">  <span class="bg-purple-600 w-[5px] h-[20px] inline-block"></span>Misi</h1>
+            <p>Misi RuangKode adalah menyediakan akses belajar coding yang lengkap, relevan, dan terjangkau bagi semua orang melalui materi interaktif, bimbingan mentor, dan komunitas suportif untuk mendorong transformasi digital di Indonesia.</p>
+            </div>
+            <img src="assets/misi.png" class="w-full md:w-1/2" />
+        </div>
+        </section>
+
+        <footer
+        class="w-full flex flex-col items-center justify-between font-spacegrotesk mt-24 bg-white rounded-t-lg md:px-12 px-4 py-8"
+        >
+        <div class="flex flex-col md:flex-row justify-between gap-8 w-full">
+            <div class="flex flex-col gap-10 md:w-1/2">
+            <div class="flex flex-col gap-4 item-start justify-center">
+                <a href="#" class="font-bold text-3xl text-black">RuangKode</a>
+                <p class="font-normal text-lg text-black max-w-md leading-relaxed">
+                RuangKode Learning Space Jl. Teknologi Inovatif No.42,
+                Cipamokolan, Kec. Arcamanik, Kota Bandung Jawa Barat 40293
+                </p>
+            </div>
+            <div class="flex flex-row gap-2">
+                <a href="#">
+                <img src="assets/facebook.svg" alt="Facebook" class="w-6 h-6" />
+                </a>
+                <a href="#">
+                <img src="assets/linkedin.svg" alt="Facebook" class="w-6 h-6" />
+                </a>
+                <a href="#">
+                <img src="assets/youtube.svg" alt="Facebook" class="w-6 h-6" />
+                </a>
+                <a href="#">
+                <img src="assets/instagram.svg" alt="Facebook" class="w-6 h-6" />
+                </a>
+            </div>
+            </div>
+
+            <div class="flex flex-col gap-3 items-center bg-white p-6 md:w-1/2">
+            <h4 class="text-4xl font-bold text-black">Langganan</h4>
+            <p class="text-lg font-base text-black">
+                Terima notifikasi khusus dari email
+            </p>
+
+            <div class="flex flex-col gap-3 items-center w-full">
+                <input
+                type="text"
+                placeholder="Nama"
+                class="bg-white rounded-xl py-4 px-4 w-full max-w-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-black"
+                />
+                <input
+                type="text"
+                placeholder="Nomor Handphone"
+                class="bg-white rounded-xl py-4 px-4 w-full max-w-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-black"
+                />
+                <input
+                type="text"
+                placeholder="Email"
+                class="bg-white rounded-xl py-4 px-4 w-full max-w-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-black"
+                />
+            </div>
+            </div>
+        </div>
+
+        <div
+            class="relative w-full flex flex-col items-center md:items-start text-center text-black mt-6"
+        >
+            <p
+            class="w-full md:w-auto md:absolute left-1/2 transform md:-translate-x-1/2"
+            >
+            © 2025 RuangKode. All rights reserved.
+            </p>
+            <p
+            class="w-full md:w-auto md:absolute right-0 md:text-right mt-2 md:mt-0"
+            >
+            Terms • Privacy
+            </p>
+        </div>
+        </footer>
+
+        <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const iconHamburger = document.getElementById("icon-hamburger");
+        const iconClose = document.getElementById("icon-close");
+
+        let menuOpen = false;
+
+        hamburgerBtn.addEventListener("click", function () {
+            menuOpen = !menuOpen;
+
+            if (menuOpen) {
+            mobileMenu.classList.remove("slide-out");
+            mobileMenu.classList.add("slide-in");
+            iconHamburger.classList.add("hidden");
+            iconClose.classList.remove("hidden");
+            } else {
+            mobileMenu.classList.add("slide-out");
+            mobileMenu.classList.remove("slide-in");
+            iconHamburger.classList.remove("hidden");
+            iconClose.classList.add("hidden");
+            }
+        });
+
+        document.addEventListener("click", function (event) {
+            if (
+            menuOpen &&
+            !hamburgerBtn.contains(event.target) &&
+            !mobileMenu.contains(event.target)
+            ) {
+            menuOpen = false;
+            mobileMenu.classList.add("slide-out");
+            mobileMenu.classList.remove("slide-in");
+            iconHamburger.classList.remove("hidden");
+            iconClose.classList.add("hidden");
+            }
+        });
+        </script>
+    </body>
+    </html>

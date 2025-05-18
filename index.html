@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navbar Responsive</title>
+    <title>RuangKode</title>
     <link rel="stylesheet" href="src/output.css" />
     <style>
       .slide-in {
@@ -14,6 +14,22 @@
       .slide-out {
         transform: translateY(-120%);
         transition: transform 0.3s ease-in-out;
+      }
+
+      ::-webkit-scrollbar{
+        width: 10px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-track{
+        background: #f1f1f1;
+        border-radius: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb{
+        background-color: #3c00ff;
+        border-radius:  2px;
+        border: 2px solid #f1f1f1;
       }
     </style>
   </head>
@@ -46,7 +62,7 @@
         <svg
           id="icon-close"
           xmlns="http://www.w3.org/2000/svg"
-          class="h-7 w-7 text-purple-500"
+          class="h-7 w-7 text-purple-500 hidden"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -105,7 +121,7 @@
           <button
             class="bg-purple-600 px-4 py-4 md:px-5 md:py-4 text-white md:text-lg text-base rounded-lg md:mt-8 mt-4"
           >
-            Eksplor Lebih Lanjut
+            <a href="tambahan.html">Eksplor Lebih Lanjut</a>
           </button>
         </div>
 
@@ -195,11 +211,11 @@
     </section>
 
     <div
-      class="flex flex-col items-center gap-10 border-t-2 border-b-2 border-white mt-8 pb-16 pt-8 md:mx-28"
+      class="flex flex-col items-center gap-10 border-t-2 border-b-2 border-white mt-8 pb-32 pt-8 md:mx-28"
     >
       <h1 class="text-4xl font-bold font-spacegrotesk">Dipercaya Oleh</h1>
       <div
-        class="flex flex-row gap-8 justify-center md:overflow-x-hidden overflow-x-scroll"
+        class="w-full flex flex-row pl-4 gap-8 justify-start md:overflow-none overflow-x-auto"
       >
         <img src="assets/mediaIcon1.png" alt="" />
         <img src="assets/mediaIcon2.png" alt="" />
@@ -213,18 +229,18 @@
     <section
       class="w-full flex flex-col items-center font-spacegrotesk mt-24 gap-16"
     >
-      <h1 class="text-4xl font-bold font-spacegrotesk">
+      <h1 class="text-4xl text-center font-bold font-spacegrotesk">
         Jelajahi Program Kami
       </h1>
-      <div class="grid grid-cols-3 justify-center gap-8 md:overflow-x-hidden overflow-x-scroll">
-        <div class="bg-abu flex flex-col justify-between gap-4 p-8 w-[390px] rounded-2xl">
+      <div class="w-full flex justify-center gap-8 md:overflow-x-visible px-4 mx-4 md:px-0 overflow-x-scroll">
+        <div class="bg-abu flex flex-col justify-between gap-4 p-8 w-[390px] min-w-[390px] rounded-2xl">
           <img src="assets/programIcon1.png" alt="" class="w-16" />
           <div class="flex flex-col gap-1">
             <h1 class="text-4xl font-bold font-spacegrotesk">
               Data Analytics
             </h1>
-            <p class="font-poppins text-xs">Live Program • 4 or 7 Months</p>
-            <p class="font-spacegrotesk text-orange-200">Stay ahead with RuangKode</p>
+            <p class="font-poppins text-xs">Live Program • 4 or 7 Months</p>
+            <p class="font-spacegrotesk text-orange-200">Stay ahead with RuangKode</p>
           </div>
           <ul class="flex flex-col">
             <li class="inline-flex">
@@ -248,7 +264,7 @@
           </ul>
           <button class="bg-ungu font-poppins text-lg py-2 rounded-lg">Daftar</button>
         </div>
-        <div class="bg-abu flex flex-col justify-between  gap-4 p-8 w-[390px] rounded-2xl">
+        <div class="bg-abu flex flex-col justify-between  gap-4 p-8 w-[390px] min-w-[390px] rounded-2xl">
           <img src="assets/programIcon2.png" alt="" class="w-16" />
           <div class="flex flex-col gap-1">
             <h1 class="text-4xl font-bold font-spacegrotesk">
@@ -278,7 +294,7 @@
           <button class="bg-ungu font-poppins text-lg py-2 rounded-lg">Daftar</button>
         </div>
         
-        <div class="bg-abu flex flex-col justify-between gap-4 p-8 w-[390px] rounded-2xl">
+        <div class="bg-abu flex flex-col justify-between gap-4 p-8 w-[390px] min-w-[390px] rounded-2xl">
           <img src="assets/programIcon3.png" alt="" class="w-16" />
           <div class="flex flex-col gap-1">
             <h1 class="text-4xl font-bold font-spacegrotesk">
@@ -347,17 +363,17 @@
     <input
       type="text"
       placeholder="Nama"
-      class="bg-white rounded-xl py-4 px-4 w-full max-w-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+      class="bg-white rounded-xl py-4 px-4 w-full max-w-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-black"
     />
     <input
       type="text"
       placeholder="Nomor Handphone"
-      class="bg-white rounded-xl py-4 px-4 w-full max-w-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+      class="bg-white rounded-xl py-4 px-4 w-full max-w-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-black"
     />
     <input
       type="text"
       placeholder="Email"
-      class="bg-white rounded-xl py-4 px-4 w-full max-w-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+      class="bg-white rounded-xl py-4 px-4 w-full max-w-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-black"
     />
   </div>
 </div>
@@ -404,8 +420,8 @@
           !mobileMenu.contains(event.target)
         ) {
           menuOpen = false;
-          mobileMenuClassList.add("slide-out");
-          mobileMenuClassList.remove("slide-in");
+          mobile.MenuClassList.add("slide-out");
+          mobile.MenuClassList.remove("slide-in");
           iconHamburger.classList.remove("hidden");
           iconClose.classList.add("hidden");
         }
