@@ -39,9 +39,9 @@
     >
       <a href="#" class="font-bold text-xl">RuangKode</a>
 
-      <!-- Hamburger button -->
+  
       <button id="hamburger-btn" class="md:hidden focus:outline-none">
-        <!-- Hamburger Icon -->
+
         <svg
           id="icon-hamburger"
           xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,6 @@
           />
         </svg>
 
-        <!-- Close Icon (hidden by default) -->
         <svg
           id="icon-close"
           xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +75,6 @@
         </svg>
       </button>
 
-      <!-- Desktop Menu -->
       <ul class="md:flex hidden items-center justify-center gap-6">
         <li><a href="#">Beranda</a></li>
         <li><a href="#">Why RuangKode?</a></li>
@@ -390,6 +388,11 @@
     </footer>
 
     <script>
+      AOS.init();
+    </script>
+
+    <script>
+   
       const hamburgerBtn = document.getElementById("hamburger-btn");
       const mobileMenu = document.getElementById("mobile-menu");
       const iconHamburger = document.getElementById("icon-hamburger");
